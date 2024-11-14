@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <style>
         body {
-            direction: rtl;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 110px;
-            background-color: lightblue;
-            display: flex;
-            justify-content:center;
            
+            font-family: Arial, sans-serif;
+            margin-top: 150px;           
+             height: 90vh;
+            background: linear-gradient(to bottom,#003366,  #000000);
+            display: flex;
+            align-items: flex-start;            
+             direction: rtl;                   
+
         }
 
-        .container {
+
+         .container {
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
@@ -26,15 +28,17 @@
         }
 
         select {
-            height: 55px;
-            width: 450px;
-            font-size: 24px;
+            height: 70px;
+            width: 470px;
+            font-size: 30px;
             padding: 10px;
             border-radius: 15px;
             box-shadow: 0 10px 1px rgba(0, 0, 0, 0.2);
             color: BLACK;
             background-color: YELLOW;
-            border: 2px solid BLACK;
+            border: 3px solid BLACK;
+            text-align: right; /* محاذاة النص لليمين */           
+            font-weight: bold;
         }
 
         select:focus {
@@ -47,13 +51,15 @@
             margin-bottom: 10px;
             padding: 10px;
             font-size: 24px;
-            background-color: lightblue;
-            color: #000080;
-            border: 2px solid #000080;
+           background: linear-gradient(to bottom,#003366,  #000000);
+            color: white;
+             border: 3px solid yellow;
             border-radius: 10px;
             cursor: pointer;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
+            margin-left: auto; /* نقل الأزرار إلى اليمين */
+            font-weight: bold;
         }
 
         .back-button {
@@ -61,16 +67,14 @@
             margin-top: 20px;
             padding: 10px;
             font-size: 28px;
-            background-color: lightblue;
-            color: black;
-            border: 2px solid #000080;
+            background: linear-gradient(to bottom,#003366,  #000000);
+            color: white;
+            border: 3px solid yellow;
             border-radius: 10px;
             cursor: pointer;
+            font-weight: bold;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
-        }
-
-        button:hover {
-            background-color:YELLOW;
+            margin-left: auto; /* نقل زر الرجوع إلى اليمين */
         }
 
         .hidden {
@@ -79,9 +83,18 @@
 
         .button-container {
             margin-bottom: 10px;
+            align-items: flex-end; /* محاذاة الأزرار إلى اليمين */
+            margin-left: auto; /* دفع الأزرار لليمين */
         }
 
-        .content-div {
+
+             button: hover {
+
+
+            background-color:YELLOW;
+        }
+
+       .content-div {
             background-color: white;
             padding: 30px;
             font-size: 18px;
@@ -98,13 +111,13 @@
             line-height: 1.5;
             color: #000080;
         }
-
-        header {
+       header {
+            height: 100vh;
+            background: linear-gradient(to bottom,#003366,  #000000);
             position: fixed;
-            height: 70px;
+            height: 110px;
             top: 0;
-            width: 100%;
-            background-color: lightblue;
+            width: 100%;            
             color: black;
             z-index: 1000;
             padding: 10px;
@@ -114,14 +127,16 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
             border-bottom: 2px solid rgba(0, 0, 0, 0.2);
             border-radius: 8px;
-            border: 2px solid black;
+            border: 2px solid white;
             text-align: center;
             font-size: 20px;
             font-weight: bold;
+            color: yellow;
         }
 
+
         .selected-info {
-            background-color: #00FFFF;
+            background-color:lightblue;
             padding: 30px;
             border: 3px solid #000080;
             border-radius: 10px;
@@ -129,11 +144,11 @@
             font-size: 30px;
             text-align: center;
         }
-
         label {
-            font-size: 25px;
+            font-size: 28px;
             margin-bottom: 4px;
-            display: block; /* عرض النص فوق القائمة */
+            display: block;
+            text-align: center; /* محاذاة النص إلى اليمين */
         }
     </style>
 </head>
