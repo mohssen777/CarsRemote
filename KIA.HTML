@@ -106,6 +106,136 @@
         .content-div p {
             margin: 0;
             line-height: 1.5;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+           
+            font-family: Arial, sans-serif;
+            margin-top: 150px;           
+            background: #f0f0f0;
+            display: flex;
+            align-items: flex-start;            
+             direction: rtl;                   
+
+        }
+
+
+         .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             
+        }
+
+        select {
+            height: 70px;
+            width: 550px;
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 1px rgba(0, 0, 0, 0.2);
+            color: BLACK;
+            background-color: YELLOW;
+            border: 3px solid BLACK;
+            text-align: right; /* محاذاة النص لليمين */           
+            font-weight: bold;
+        }
+
+        select:focus {
+            outline: yellow;
+        }
+
+        button {
+            display: block;
+            width:97%;
+            height: 100px;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 30px;
+           background: linear-gradient(to bottom,#003366,  #000000);
+            color: white;
+             border: 3px solid BLACK;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
+            margin-left: auto; /* نقل الأزرار إلى اليمين */
+            font-weight: bold;
+        }
+
+        .back-button {
+            width: 97%;
+            height: 70px;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 28px;
+            background: linear-gradient(to bottom,#003366,  #000000);
+            color: white;
+            border: 3px solid BLACK;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
+            margin-left: auto; /* نقل زر الرجوع إلى اليمين */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .button-container {
+            margin-bottom: 10px;
+            align-items: flex-end; /* محاذاة الأزرار إلى اليمين */
+            margin-left: auto; /* دفع الأزرار لليمين */
+        }
+
+
+             button: hover {
+            background-color:YELLOW;
+        }
+       
+.selected-info {
+           background: #f0f0f0;
+            padding: 30px;
+            border: 3px solid #000080;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+                
+            padding-bottom: 200px; /* يضيف مساحة أسفل المحتوى لتجنب تغطيته بالشريط */
+          
+        }
+        label {
+            font-size: 28px;
+            margin-bottom: 2px;
+            display: block;
+            text-align: center; /* محاذاة النص إلى اليمين */
+        }
+
+       .content-div {
+            background-color: white;
+            padding: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            text-align: right;
+            width: 90%;
+            border: 2px solid #000080;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
+        }
+
+        .content-div p {
+            margin: 0;
+            line-height: 1.5;
             color: #000080;
         }
        header {
@@ -134,46 +264,28 @@
  
         }
 
-        .selected-info {
-           background: #f0f0f0;
-            padding: 30px;
-            border: 3px solid #000080;
-            border-radius: 10px;
-            width: 620px;
-            font-size: 30px;
+.ad-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%; /* يغطي العرض بالكامل */
+            background-color: #f1f1f1;
+            padding: 10px 0;
             text-align: center;
-          
-        }
-        label {
-            font-size: 28px;
-            margin-bottom: 2px;
-            display: block;
-            text-align: center; /* محاذاة النص إلى اليمين */
-        }
-      
- /* تعديل حجم الإعلان */
-        .ad-container iframe {
-            width: 100%;
-            height: 800px; /* تكبير الإعلان ليغطي عرض الصفحة */
-            border: none;
-            margin: 0;
-            border: 2px solid BLACK;
-           border: 2px solid black;
-            text-align: center;
-            font-size: 20px;
-             border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-        }
- .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 15px;
+            z-index: 1000;
+            border-top: 3px solid black;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        label {
-            font-size: 25px;
-            margin-bottom: 4px;
-            display: block; /* عرض النص فوق القائمة */
+        .ad-container iframe {
+            width: 100%;
+            height: 170px; /* يمكن ضبط الطول حسب رغبتك */
+            border: none;
+        
+     
         }
+       
+      
+
     </style>
 </head>
 <body>
