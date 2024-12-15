@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOYOTA</title>
+    <title>AODI</title>
     <style>
         body {
            
@@ -219,8 +219,8 @@
 <option value="29">TTS</option>
 </select>
 </header>
-<div class="  select-info">
-<!-- زر العودة -->
+ <div class="  selected-info">
+ <!-- زر العودة -->
     <button id="backButton" class="back-button" onclick="goBack()">رجـــــــــــــوع</button>
 
 <div id="1Model" class="hidden button-container"><P>اختار المديــــــــــــــل</P>
@@ -358,12 +358,33 @@
 <LI>6. ثم أدر مفتاح الباب عكس اتجاه عقارب الساعة حتى يصدر البوق صوت تنبيه ثلاث مرات لإلغاء تنشيط وضع البرمجة، ثم قم بإزالة مفتاح الإشعال. </LI>
 <LI>7. اختبر جميع أجهزة التحكم عن بعد.</LI>
 </div>
+<div class="ad-container">
+<iframe id="adFrame" src="https://www.profitablecpmrate.com/ajga08pj?key=22e846e7babeda567215e46d4901e2ea"></iframe>
+    </div>
 </div>
  <div class="ad-container">
 <iframe id="adFrame" src="https://www.profitablecpmrate.com/ajga08pj?key=22e846e7babeda567215e46d4901e2ea"></iframe>
     </div>
 
 <script>
+// روابط الإعلانات
+        const adLinks = [
+            "https://www.profitablecpmrate.com/ajga08pj?key=22e846e7babeda567215e46d4901e2ea",
+            "https://www.profitablecpmrate.com/ajga08pj?key=22e846e7babeda567215e46d4901e2ea",  // يمكنك إضافة المزيد من الروابط هنا
+            
+        ];
+
+        let currentAdIndex = 0;
+
+        // دالة لتغيير الإعلان
+        function changeAd() {
+            currentAdIndex = (currentAdIndex + 1) % adLinks.length;
+            document.getElementById('adFrame').src = adLinks[currentAdIndex];
+        }
+
+        // تغيير الإعلان كل دقيقة (60 ثانية)
+        setInterval(changeAd, 10000);
+
         function openSidebar() {
             document.getElementById("sidebar").style.width = "250px";
         }
