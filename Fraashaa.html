@@ -18,37 +18,38 @@
             background-color: #f4f4f4;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             min-height: 100vh;
-            padding-top: 120px; /* المسافة من الهيدر الثابت */
         }
 
         /* تنسيق الهيدر */
         header {
-            position: fixed;
-            height: 300px;
+            position: relative; /* تأكيد أن الهيدر يحتوي الإعلان */
             top: 0;
+            left: 0;
             width: 100%;
-            background-color: lightblue;
-            color: black;
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
             z-index: 1000;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(255, 255, 255, 0.3);
-            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            border: 2px solid black;
-            text-align: center;
-            font-size: 18px;
-            text-align: center;
-            
+            overflow: hidden; /* تأكيد أن الإعلان لا يمتد خارج الهيدر */
         }
 
         header h1 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* تصميم الإعلان داخل الهيدر */
+        #container-950ff3c74dc90af2e68af8bd5d143c00 {
+            margin: 10px auto;
+            width: 100%; /* تأكد من أن الإعلان يستفيد من كامل العرض */
+            max-width: 728px; /* الحد الأقصى لعرض الإعلان */
+            height: auto;
+            min-height: 50px; /* تحديد الحد الأدنى للارتفاع */
+            z-index: 999;
+            text-align: center;
         }
 
         /* الحاوية التي تحتوي الأزرار */
@@ -63,6 +64,7 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 100%;
+            margin-top: 100px; /* المسافة بين الهيدر والمحتويات */
         }
 
         /* تنسيق الأزرار */
@@ -102,20 +104,16 @@
                 font-size: 14px;
             }
         }
-
-        /* تصميم الإعلان */
-        #container-950ff3c74dc90af2e68af8bd5d143c00 {
-            
-            max-width: 728px;
-            height: 90px; /* تقليص حجم الإعلان */
-        }
     </style>
 </head>
 <body>
     <header>
-        <!-- الكود الإعلاني -->
-        <script async="async" data-cfasync="false" src="//yapabbreviate.com/950ff3c74dc90af2e68af8bd5d143c00/invoke.js"></script>
-        <div id="container-950ff3c74dc90af2e68af8bd5d143c00"></div>
+        <h1>مرحبًا بك في موقعي</h1>
+        
+        <!-- الكود الإعلاني داخل الهيدر -->
+        <div id="container-950ff3c74dc90af2e68af8bd5d143c00">
+            <script async="async" data-cfasync="false" src="//yapabbreviate.com/950ff3c74dc90af2e68af8bd5d143c00/invoke.js"></script>
+        </div>
     </header>
 
     <div class="container">
